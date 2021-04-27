@@ -228,11 +228,11 @@
         }
         if (temp2.length == 0) {
             if (score22 > score11) {
-                alert('game over, Player2 wins');
+                alert('game over, Player2 wins: ' + score22 + ' ' + score11);
             } else if (score22 < score11) {
-                alert('game over, Player1 wins');
+                alert('game over, Player1 wins: ' + score11 + ' ' + score22);
             } else {
-                alert('game over, it`s tie!');
+                alert('game over, it`s tie! ' + score22);
             }
             location.reload();
         }
