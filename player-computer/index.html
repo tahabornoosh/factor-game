@@ -140,6 +140,7 @@
                     document.getElementById('endselect').style.display = 'block';
                     mode = 1;
                     if (turn == 2) {
+                        document.getElementById('endselect').style.display = 'none';
                         setTimeout(function() {
                             autoplay(id);
                         }, 1500);
@@ -246,6 +247,7 @@
     }
 
     function autoplay(input) {
+        document.getElementById('endselect').style.display = 'none';
         numss = cf(input);
         loop = 1;
         while (loop != numss.length) {
@@ -296,5 +298,13 @@
     function random(max, min) {
         random1 = Math.floor(Math.random() * (max - min + 1) + min);
         return (random1);
+    }
+
+    function delay(delayInms) {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve(2);
+            }, delayInms);
+        });
     }
 </script>
