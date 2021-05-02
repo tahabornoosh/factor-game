@@ -156,6 +156,8 @@
                         turn = 2;
                         document.getElementById('p2').style.border = '4px solid green';
                         document.getElementById('p1').style.border = '2px solid red';
+                        sgn1 = sgn();
+                        clicks(sgn1);
                     } else {
                         turn = 1;
                         document.getElementById('p1').style.border = '4px solid green';
@@ -251,7 +253,7 @@
         mode = 0;
     }
 
-    async function autoplay(input) {
+    async function autoplay(input, exp) {
         document.getElementById('endselect').style.display = 'none';
         numss = cf(input);
         loop = 1;
@@ -262,7 +264,9 @@
             loop++
         }
         ends();
+        if(exp != 'yes') {
         clicks(sgn());
+        }
     }
 
     function sgn() {
